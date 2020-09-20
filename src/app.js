@@ -1,3 +1,5 @@
 import calculate from './files/calculate';
 
-alert(calculate())
+const root = document.getElementById('root').innerText = calculate();
+
+console.log('anurag')

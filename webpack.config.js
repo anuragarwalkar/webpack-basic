@@ -1,4 +1,5 @@
 const path = require('path');
+const Webpack = require('webpack');
 
 // Placeholders
 /**
@@ -22,6 +23,8 @@ module.exports = {
     },
     devServer: {
         port: 3000,
-        contentBase: path.join(__dirname, 'dist')
-    } 
+        contentBase: path.join(__dirname, 'dist'),
+        // writeToDisk: true
+    },
+    plugins: [new Webpack.HotModuleReplacementPlugin()]
 }
